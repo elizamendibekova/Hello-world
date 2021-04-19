@@ -29,3 +29,7 @@ class Character(ABC)
 class Hero(Character):
 	def perk(self):
 		floor(randint(1,17)) + floor(((self.wisdom + self.hp) - 10) / 2)
+
+class Dragon(Character):
+	def perk(self):
+		self.hp -= floor(randint(1,17)) + floor((self.attack() / 2))
