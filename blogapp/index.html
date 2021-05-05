@@ -1,0 +1,7 @@
+{% if post_comments_list%}
+<ul>
+	{% for post in post_list %}
+		<li><a href="{% url 'Blogapp:detail' post.id %}"></a></li>
+
+	{% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+<h1>{{ post }}</h1>
+
+{% if error_message %}
+	<p><strong>{{error_message}}</strong></p>
+{%endif %}
+
+
+<form action="{%url 'BlogApp:detail' post.id %}">
+	{% csfr_token %}
+	{% for comments in post.comment_set.all %}
+	
+	{</form>	}
